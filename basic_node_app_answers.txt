@@ -1,0 +1,15 @@
+Exercises
+
+Create a file called basic_node_app_answers.txt and put your answers in the file.
+
+1. What is a Node module?
+
+A: A node module is a function or set of functions that are to be included in an application. Modules are separated by concerns. Each module performs a function set of functions perform a specific task. This allows each module to be reused over and over again within the application or even in other similar applications. Each module is usually contained to its own js file. Communication between modules is controlled by Node.js import and export functions. 
+
+2. What is the main difference between exports and module.exports?
+
+A: Module.exports is an object in Node.js that contains the functions to be exported in a module. Export is a variable that points to the module.exports object. Exports can add functions to the module.exports object but since exports is a variable and not an object, it does not work the other way around. When imported into a different module, the require function is only reading the module.exports object.
+
+3. Why is using exports recommended?
+
+A: Using exports is recommended because it cannot overwrite the entire module.exports object. If you were to try to set exports to something different (i.e. exports = ‘foo’) it would become a new string and would no longer be a variable of module.exports leaving module.exports intact. If you where to set module.exports to something different (i.e. module.exports = ‘foo’) it would overwrite all of the data in module.exports. Using exports safeguards against overwriting module.exports entirely.
